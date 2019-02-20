@@ -48,7 +48,6 @@ function theResponse(response, position) {
 function constructCityDiv(jsonObject, position){  
     // remove spaces
     let cityName = jsonObject.name.replace(/\s/g, '');
-    console.log("cityName ", cityName);
 
     let weather = getIcon(jsonObject.weather[0].main);
 
@@ -78,7 +77,6 @@ function constructCityDiv(jsonObject, position){
         nav.insertAdjacentHTML('beforeend', navLink);
     } else {
         // new city
-        console.log("newCities ", newCities);
         configNewCity(jsonObject);
     }
 }
@@ -93,10 +91,7 @@ function configNewCity(jsonObject){
         // add city to the list
         newCities.push(jsonObject);
         saveObjInLS(newCities);
-        console.log("newCities ", newCities);
     }
-        
-    console.log("cityIndex ", cityIndex);
 
     // add remove btn
     let removeBtn = `<button class="delBtn" data-index="`+ cityIndex +`">remove</button>`;
@@ -105,11 +100,9 @@ function configNewCity(jsonObject){
     
     // add remove btn listener
     let delBtns = document.getElementsByClassName("delBtn");
-    console.log("delBtns ", delBtns);
+
     for (let i = 0; i < delBtns.length; i++) {
-        console.log('remove btn created');
         delBtns[i].addEventListener("click", deleteCity, false);
-        console.log("delBtns[i] ", delBtns[i]);
     }
     
     // scroll to new city
@@ -134,16 +127,13 @@ function httpRequestAsync(url, callback, position) {
 }
 
 function deleteCity(e){
-    console.log('remove btn clicked');
     let delBtn = e.target;
     let index = delBtn.dataset.index;
     
-    console.log("delBtn.parentNode", delBtn.parentNode);
     let delDiv = delBtn.parentNode;
     delDiv.style.display = "none";
 
     newCities.splice(index, 1);
-    console.log("newCities ", newCities);
     saveObjInLS(newCities);
 }
 
@@ -187,8 +177,6 @@ function getLsCities(){
             
             let position = {'section': document.getElementById("newCities"), 'lineUp': 'afterbegin', 'cityType': 'new'};
             constructCityDiv(lsCity, position);
-            
-            console.log("lsCity ", lsCity);
         }
     }
 
