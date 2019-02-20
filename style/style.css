@@ -1,0 +1,189 @@
+html {
+  scroll-behavior: smooth;
+  font-family: 'Open Sans', sans-serif;
+  color: #4b4b4b; }
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none; }
+
+body {
+  margin: 0em; }
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  z-index: 10;
+  background-color: white;
+  width: 100%; }
+  nav a {
+    margin: 1em;
+    text-decoration: none;
+    color: black; }
+    nav a:visited {
+      color: black; }
+    nav a:hover {
+      color: #4b4b4b; }
+
+#newCityBtn {
+  border: solid 1px #cab9b0;
+  border-radius: 50px;
+  padding: .5em 1.5em; }
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 0em; }
+
+.change {
+  display: none; }
+
+#hamburger {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  opacity: .7; }
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 30em;
+  padding: 2em;
+  margin: 0em 1.5em 1.5em 1.5em;
+  background-color: #f3efed; }
+
+.cityContainer {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+  padding: 0em 5em;
+  margin-top: 1em;
+  min-height: 20em; }
+  @media screen and (min-width: 1000px) {
+    .cityContainer {
+      flex: 1 0 21%;
+      margin: 5px; } }
+  .cityContainer div {
+    display: flex; }
+    .cityContainer div .weatherInfo {
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 2em; }
+    .cityContainer div .container {
+      display: none; }
+
+#inputBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 20em; }
+
+.col {
+  margin: 0em;
+  text-transform: capitalize; }
+
+.temp {
+  font-size: 3em;
+  font-weight: 800; }
+
+.humidity {
+  padding-top: 6em; }
+
+#search-btn {
+  color: #4b4b4b;
+  margin-left: 1em; }
+
+#search-txt {
+  height: 3em;
+  border-radius: 50px;
+  border: 1px solid #4b4b4b;
+  padding-left: 2em;
+  font-family: inherit;
+  font-size: .8rem; }
+
+.delBtn {
+  width: 100%;
+  height: 4em;
+  border: 0px;
+  font-size: .8rem;
+  text-transform: capitalize;
+  font-family: inherit;
+  color: #4b4b4b;
+  cursor: pointer;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, white 50%, rgba(255, 255, 255, 0) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#00ffffff',GradientType=1 );
+  /* IE6-9 */ }
+
+#newCities {
+  margin-bottom: 1.5em; }
+
+.cloudyBg, .rainyBg, .stormyBg, .snowyBg {
+  background: #8e9eab;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #eef2f3, #8e9eab);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #eef2f3, #8e9eab);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
+
+.snowyBg {
+  background: #E0EAFC;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #CFDEF3, #FFF);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #CFDEF3, #FFF);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
+
+.sunnyBg, .rainbowBg {
+  background: #f7f6cb;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ffffff, #f7f6cb);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ffffff, #f7f6cb);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
+
+@media only screen and (min-width: 1000px) {
+  #falconCities, #newCities {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0em 1.5em; } }
+@media only screen and (min-width: 775px) {
+  #hamburger {
+    display: none; }
+
+  nav {
+    display: flex;
+    flex-direction: initial;
+    justify-content: flex-end;
+    position: initial;
+    height: 5em; }
+
+  .change {
+    display: flex; }
+
+  #search-txt {
+    width: 500px; } }
+@media only screen and (min-width: 400px) {
+  .cityContainer div {
+    display: flex; }
+    .cityContainer div .container {
+      display: flex;
+      margin: 3em;
+      align-items: center; }
+
+  #search-txt {
+    width: 300px; }
+
+  nav {
+    box-sizing: border-box;
+    padding-right: .5em; } }
+
+/*# sourceMappingURL=style.css.map */

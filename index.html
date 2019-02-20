@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Falcon weather</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link rel="stylesheet" type="text/css" media="screen" href="style/style.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="style/weather.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800" rel="stylesheet">
+</head>
+<body>
+    <div id="hamburger">
+        <p>Menu</p>
+    </div>
+    <nav class="change">
+        <a id="newCityBtn" href="#newCity">Add your city</a>
+    </nav>
+    <main>
+        <h1>Weather in Falcon offices</h1>
+        <p>Discover what's the weather like around the world</p>
+    </main>
+    <section id="falconCities"></section>
+    <section id="newCity">
+        <div id="inputBox">
+            <h2>Check the weather in any city</h2>
+            <div>
+                <input placeholder="Enter City Name" id="search-txt">
+                <a id="search-btn" href="#"><i class="fas fa-search"></i></a>
+            </div>
+        </div>
+        <div id="newCities"></div>
+    </section>
+    
+    <script src='https://use.fontawesome.com/releases/v5.0.13/js/all.js'></script>
+    <script  src="index.js"></script>
+</body>
+</html>
